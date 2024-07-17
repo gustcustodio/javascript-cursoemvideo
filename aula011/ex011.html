@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+
+        <div>
+            <label for="inPais">Digite o seu País:</label>
+            <input type="text" name="pais" id="inPais">
+            <input type="submit" value="Clique para mostrar a Nacionalidade" onclick="verificar()">
+        </div>
+        
+    <h3></h3>
+
+    <script>
+        function verificar() {
+            const txtPais = document.querySelector('#inPais')
+            const res = document.querySelector('h3')
+
+            const pais = txtPais.value
+
+            if (pais == 'Brasil'){
+                res.innerText = `Você é Brasileiro!`
+            } else {
+                res.innerText = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
